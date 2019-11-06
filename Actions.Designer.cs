@@ -80,7 +80,6 @@
             this.textBox8.Size = new System.Drawing.Size(174, 25);
             this.textBox8.TabIndex = 66;
             this.textBox8.Text = "DI-1125225";
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // button1
             // 
@@ -92,6 +91,7 @@
             this.button1.Size = new System.Drawing.Size(75, 37);
             this.button1.TabIndex = 65;
             this.button1.Text = "END";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -151,6 +151,7 @@
             this.button8.Size = new System.Drawing.Size(81, 37);
             this.button8.TabIndex = 61;
             this.button8.Text = "START";
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // label5
             // 
@@ -159,7 +160,6 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(127, 20);
             this.label5.Text = "Operator Badge Id";
-            this.label5.ParentChanged += new System.EventHandler(this.label5_ParentChanged);
             // 
             // label8
             // 
@@ -168,7 +168,6 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(100, 20);
             this.label8.Text = "Job No";
-            this.label8.ParentChanged += new System.EventHandler(this.label8_ParentChanged);
             // 
             // label9
             // 
