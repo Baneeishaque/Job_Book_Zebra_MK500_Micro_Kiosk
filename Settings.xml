@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key="webServiceURL" value="http://192.168.1.102/job_time_tracker_service/Service.asmx" />
+  </appSettings>
+</configuration>

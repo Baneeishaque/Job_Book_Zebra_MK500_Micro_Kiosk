@@ -33,6 +33,16 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
 
             // Sets the timer interval to 1 second.
             timer.Interval = 1000;
+
+            try
+            {
+                jobTimeTrackerService.Url = Settings.webServiceURL;
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Settings Error : " + exception.Message);
+                Application.Exit();
+            }
         }
 
         private void buttonStart_Click(object sender, EventArgs e)

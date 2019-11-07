@@ -93,6 +93,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
     <Compile Include="Web References\job_time_tracker_service\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -104,7 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <WebReferenceUrl Include="http://192.168.1.102/job_time_tracker_service/Service.asmx">
-      <UrlBehavior>Static</UrlBehavior>
+      <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\job_time_tracker_service\</RelPath>
       <UpdateFromURL>http://192.168.1.102/job_time_tracker_service/Service.asmx</UpdateFromURL>
       <ServiceLocationURL>
@@ -124,6 +125,11 @@
     </None>
     <None Include="Web References\job_time_tracker_service\Service.disco" />
     <None Include="Web References\job_time_tracker_service\Service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Settings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ProjectExtensions>
