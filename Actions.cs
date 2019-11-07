@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
@@ -15,6 +12,7 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
     {
         int timerSeconds = 0, timerMinutes = 0, timerHours = 0;
         string operatorBadgeID, jobNumber, itemNumber, coreNumber, coreTotal, tableID, phase;
+        job_time_tracker_service.Service jobTimeTrackerService = new Job_Book_Zebra_MK500_Micro_Kiosk.job_time_tracker_service.Service();
 
         public Actions(string passedOperatorBadgeID, string passedJobNumber, string passedItemNumber, string passedCoreNumber, string passedCoreTotal, string passedTableID, string passedPhase)
         {
@@ -39,10 +37,8 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            DBhandler db = new DBhandler();
-            string dbOperationResult=db.SingleInsert("INSERT INTO equipment_scrum(equipment, job, item, core, core_total, phase, status) VALUES('M00045', " + jobNumber + ", " + itemNumber + ", " + coreNumber + ", " + coreTotal + ", '" + phase + "', 'Start')");
-
-            if (dbOperationResult=="1")
+            string dbOperationResult = jobTimeTrackerService.InsertJob("M00045", jobNumber, itemNumber, coreNumber, coreTotal, phase, "Start");
+            if (dbOperationResult == "1")
             {
                 buttonStart.Enabled = false;
                 textBoxStatus.Text = "Start";
@@ -58,13 +54,26 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
             {
                 MessageBox.Show("Database Error : " + dbOperationResult);
             }
-
-
         }
 
         private void buttonEnd_Click(object sender, EventArgs e)
         {
             timer.Enabled = false;
+            string dbOperationResult = jobTimeTrackerService.InsertJob("M00045", jobNumber, itemNumber, coreNumber, coreTotal, phase, "End");
+            if (dbOperationResult == "1")
+            {
+                MessageBox.Show("Thanks...");
+                Application.Exit();
+            }
+            else if (dbOperationResult == "0")
+            {
+
+                MessageBox.Show("Database Error...");
+            }
+            else
+            {
+                MessageBox.Show("Database Error : " + dbOperationResult);
+            }
         }
 
         private void timer_Tick(object sender, EventArgs e)

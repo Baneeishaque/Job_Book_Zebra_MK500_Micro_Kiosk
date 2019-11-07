@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
@@ -46,12 +43,12 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
                 MessageBox.Show("Enter Table ID");
                 textBoxTableID.Focus();
             }
-            else if (!textBoxJobNumber.Text.Contains('/'))
+            else if (!textBoxJobNumber.Text.Contains("/"))
             {
                 MessageBox.Show("Enter Job Number in Job/Item format");
                 textBoxJobNumber.Focus();
             }
-            else if (!textBoxCoreNumber.Text.Contains('/'))
+            else if (!textBoxCoreNumber.Text.Contains("/"))
             {
                 MessageBox.Show("Enter Core Number in Core/Core_Total format");
                 textBoxCoreNumber.Focus();
