@@ -124,7 +124,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(308, 180);
+            this.ClientSize = new System.Drawing.Size(307, 180);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BtnAssembly);
             this.Controls.Add(this.btnNonConformity);
@@ -132,6 +132,7 @@
             this.MinimizeBox = false;
             this.Name = "Home";
             this.Text = "LEGNANO";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

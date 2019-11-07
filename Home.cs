@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace Job_Book_Zebra_MK500_Micro_Kiosk
-{    
+{
     public partial class Home : Form
     {
         public static string tableId = "M00045", departmentCode = "AE-APW";
@@ -35,7 +35,16 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
         {
             Table table = new Table();
             table.ShowDialog();
-            CommonApi.showDeviceParameters(lblTableID,lblDepartmentCode);
+            CommonApi.showDeviceParameters(lblTableID, lblDepartmentCode);
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            //this.WindowState = FormWindowState.Normal;
+            //this.FormBorderStyle = FormBorderStyle.None;
+            //this.TopMost = true;
+            //this.Location = new Point(0, 0);
+            //this.Size = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
         }
     }
 }

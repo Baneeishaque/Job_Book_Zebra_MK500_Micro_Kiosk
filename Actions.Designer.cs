@@ -42,6 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Timer();
             this.SuspendLayout();
             // 
             // textBox5
@@ -84,6 +85,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(232, 161);
@@ -96,6 +98,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Navy;
+            this.button2.Enabled = false;
             this.button2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(94, 161);
@@ -107,6 +110,7 @@
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.Navy;
+            this.button7.Enabled = false;
             this.button7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(161, 161);
@@ -177,6 +181,10 @@
             this.label9.Size = new System.Drawing.Size(100, 20);
             this.label9.Text = "Core No";
             // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // Actions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -222,6 +230,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Timer timer;
 
     }
 }
