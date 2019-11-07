@@ -28,134 +28,110 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.textBoxStatus = new System.Windows.Forms.TextBox();
+            this.textBoxCoreNumber = new System.Windows.Forms.TextBox();
+            this.textBoxJobNumber = new System.Windows.Forms.TextBox();
+            this.textBoxOperatorBadgeID = new System.Windows.Forms.TextBox();
+            this.buttonEnd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBoxTimer = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
+            this.buttonStart = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer();
+            this.textBoxTableID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox5
+            // textBoxStatus
             // 
-            this.textBox5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.textBox5.Location = new System.Drawing.Point(133, 96);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(174, 25);
-            this.textBox5.TabIndex = 69;
+            this.textBoxStatus.Enabled = false;
+            this.textBoxStatus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.textBoxStatus.Location = new System.Drawing.Point(133, 129);
+            this.textBoxStatus.Name = "textBoxStatus";
+            this.textBoxStatus.Size = new System.Drawing.Size(174, 22);
+            this.textBoxStatus.TabIndex = 69;
             // 
-            // textBox6
+            // textBoxCoreNumber
             // 
-            this.textBox6.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.textBox6.Location = new System.Drawing.Point(133, 65);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(174, 25);
-            this.textBox6.TabIndex = 68;
+            this.textBoxCoreNumber.Enabled = false;
+            this.textBoxCoreNumber.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.textBoxCoreNumber.Location = new System.Drawing.Point(133, 65);
+            this.textBoxCoreNumber.Name = "textBoxCoreNumber";
+            this.textBoxCoreNumber.Size = new System.Drawing.Size(174, 22);
+            this.textBoxCoreNumber.TabIndex = 68;
             // 
-            // textBox7
+            // textBoxJobNumber
             // 
-            this.textBox7.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.textBox7.Location = new System.Drawing.Point(133, 37);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(174, 25);
-            this.textBox7.TabIndex = 67;
+            this.textBoxJobNumber.Enabled = false;
+            this.textBoxJobNumber.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.textBoxJobNumber.Location = new System.Drawing.Point(133, 37);
+            this.textBoxJobNumber.Name = "textBoxJobNumber";
+            this.textBoxJobNumber.Size = new System.Drawing.Size(174, 22);
+            this.textBoxJobNumber.TabIndex = 67;
             // 
-            // textBox8
+            // textBoxOperatorBadgeID
             // 
-            this.textBox8.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.textBox8.Location = new System.Drawing.Point(133, 6);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(174, 25);
-            this.textBox8.TabIndex = 66;
-            this.textBox8.Text = "DI-1125225";
+            this.textBoxOperatorBadgeID.Enabled = false;
+            this.textBoxOperatorBadgeID.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.textBoxOperatorBadgeID.Location = new System.Drawing.Point(133, 6);
+            this.textBoxOperatorBadgeID.Name = "textBoxOperatorBadgeID";
+            this.textBoxOperatorBadgeID.Size = new System.Drawing.Size(174, 22);
+            this.textBoxOperatorBadgeID.TabIndex = 66;
+            this.textBoxOperatorBadgeID.Text = "DI-1125225";
             // 
-            // button1
+            // buttonEnd
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Enabled = false;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(232, 161);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 37);
-            this.button1.TabIndex = 65;
-            this.button1.Text = "END";
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Navy;
-            this.button2.Enabled = false;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(94, 161);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(65, 37);
-            this.button2.TabIndex = 64;
-            this.button2.Text = "PAUSE";
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Navy;
-            this.button7.Enabled = false;
-            this.button7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(161, 161);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(65, 37);
-            this.button7.TabIndex = 63;
-            this.button7.Text = "RESUME";
+            this.buttonEnd.BackColor = System.Drawing.Color.Red;
+            this.buttonEnd.Enabled = false;
+            this.buttonEnd.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonEnd.ForeColor = System.Drawing.Color.White;
+            this.buttonEnd.Location = new System.Drawing.Point(232, 194);
+            this.buttonEnd.Name = "buttonEnd";
+            this.buttonEnd.Size = new System.Drawing.Size(75, 37);
+            this.buttonEnd.TabIndex = 65;
+            this.buttonEnd.Text = "END";
+            this.buttonEnd.Click += new System.EventHandler(this.buttonEnd_Click);
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(7, 131);
+            this.label2.Location = new System.Drawing.Point(7, 161);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 20);
             this.label2.Text = "Time";
             // 
-            // textBox10
+            // textBoxTimer
             // 
-            this.textBox10.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.textBox10.Location = new System.Drawing.Point(133, 131);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(173, 25);
-            this.textBox10.TabIndex = 62;
-            this.textBox10.Text = "00:00:00";
+            this.textBoxTimer.Enabled = false;
+            this.textBoxTimer.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.textBoxTimer.Location = new System.Drawing.Point(133, 161);
+            this.textBoxTimer.Name = "textBoxTimer";
+            this.textBoxTimer.Size = new System.Drawing.Size(173, 22);
+            this.textBoxTimer.TabIndex = 62;
+            this.textBoxTimer.Text = "00:00:00";
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(7, 96);
+            this.label3.Location = new System.Drawing.Point(7, 129);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 22);
             this.label3.Text = "Status";
             // 
-            // button8
+            // buttonStart
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(7, 161);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(81, 37);
-            this.button8.TabIndex = 61;
-            this.button8.Text = "START";
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.buttonStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.buttonStart.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonStart.ForeColor = System.Drawing.Color.White;
+            this.buttonStart.Location = new System.Drawing.Point(7, 194);
+            this.buttonStart.Name = "buttonStart";
+            this.buttonStart.Size = new System.Drawing.Size(81, 37);
+            this.buttonStart.TabIndex = 61;
+            this.buttonStart.Text = "START";
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
             // label5
             // 
@@ -185,24 +161,41 @@
             // 
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // textBoxTableID
+            // 
+            this.textBoxTableID.Enabled = false;
+            this.textBoxTableID.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.textBoxTableID.Location = new System.Drawing.Point(133, 97);
+            this.textBoxTableID.Name = "textBoxTableID";
+            this.textBoxTableID.Size = new System.Drawing.Size(174, 22);
+            this.textBoxTableID.TabIndex = 83;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(7, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 20);
+            this.label1.Text = "Table ID";
+            // 
             // Actions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(314, 204);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button7);
+            this.ClientSize = new System.Drawing.Size(314, 237);
+            this.Controls.Add(this.textBoxTableID);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxStatus);
+            this.Controls.Add(this.textBoxCoreNumber);
+            this.Controls.Add(this.textBoxJobNumber);
+            this.Controls.Add(this.textBoxOperatorBadgeID);
+            this.Controls.Add(this.buttonEnd);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.textBoxTimer);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
@@ -216,21 +209,21 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox textBoxStatus;
+        private System.Windows.Forms.TextBox textBoxCoreNumber;
+        private System.Windows.Forms.TextBox textBoxJobNumber;
+        private System.Windows.Forms.TextBox textBoxOperatorBadgeID;
+        private System.Windows.Forms.Button buttonEnd;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBoxTimer;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.TextBox textBoxTableID;
+        private System.Windows.Forms.Label label1;
 
     }
 }

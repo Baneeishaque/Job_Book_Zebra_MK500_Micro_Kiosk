@@ -11,12 +11,9 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
 {
     public partial class Home : Form
     {
-        public static string tableId = "M00045", departmentCode = "AE-APW";
-
         public Home()
         {
             InitializeComponent();
-            CommonApi.set_TimeStamps(lblDate, lblTime);
         }
 
         private void BtnAssembly_Click(object sender, EventArgs e)
@@ -29,13 +26,6 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
         {
             Phase phase = new Phase("Non Conformity");
             phase.ShowDialog();
-        }
-
-        private void pictureBoxSettings_Click(object sender, EventArgs e)
-        {
-            Table table = new Table();
-            table.ShowDialog();
-            CommonApi.showDeviceParameters(lblTableID, lblDepartmentCode);
         }
 
         private void Home_Load(object sender, EventArgs e)

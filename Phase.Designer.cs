@@ -28,73 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.textBoxCoreNumber = new System.Windows.Forms.TextBox();
+            this.textBoxJobNumber = new System.Windows.Forms.TextBox();
+            this.textBoxOperatorBadgeID = new System.Windows.Forms.TextBox();
+            this.buttonContinue = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.lblDepartmentCode = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lblTableID = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.textBoxTableID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox6
+            // textBoxCoreNumber
             // 
-            this.textBox6.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.textBox6.Location = new System.Drawing.Point(133, 66);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(174, 25);
-            this.textBox6.TabIndex = 76;
+            this.textBoxCoreNumber.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.textBoxCoreNumber.Location = new System.Drawing.Point(133, 66);
+            this.textBoxCoreNumber.Name = "textBoxCoreNumber";
+            this.textBoxCoreNumber.Size = new System.Drawing.Size(174, 22);
+            this.textBoxCoreNumber.TabIndex = 76;
+            this.textBoxCoreNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCoreNumber_KeyPress);
             // 
-            // textBox7
+            // textBoxJobNumber
             // 
-            this.textBox7.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.textBox7.Location = new System.Drawing.Point(133, 38);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(174, 25);
-            this.textBox7.TabIndex = 75;
+            this.textBoxJobNumber.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.textBoxJobNumber.Location = new System.Drawing.Point(133, 38);
+            this.textBoxJobNumber.Name = "textBoxJobNumber";
+            this.textBoxJobNumber.Size = new System.Drawing.Size(174, 22);
+            this.textBoxJobNumber.TabIndex = 75;
+            this.textBoxJobNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxJobNumber_KeyPress);
             // 
-            // textBox8
+            // textBoxOperatorBadgeID
             // 
-            this.textBox8.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.textBox8.Location = new System.Drawing.Point(133, 7);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(174, 25);
-            this.textBox8.TabIndex = 74;
-            this.textBox8.Text = "DI-1125225";
+            this.textBoxOperatorBadgeID.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.textBoxOperatorBadgeID.Location = new System.Drawing.Point(133, 7);
+            this.textBoxOperatorBadgeID.Name = "textBoxOperatorBadgeID";
+            this.textBoxOperatorBadgeID.Size = new System.Drawing.Size(174, 22);
+            this.textBoxOperatorBadgeID.TabIndex = 74;
+            this.textBoxOperatorBadgeID.Text = "DI-1125225";
             // 
-            // button1
+            // buttonContinue
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(232, 97);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 37);
-            this.button1.TabIndex = 73;
-            this.button1.Text = "Continue";
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonContinue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.buttonContinue.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonContinue.ForeColor = System.Drawing.Color.White;
+            this.buttonContinue.Location = new System.Drawing.Point(232, 127);
+            this.buttonContinue.Name = "buttonContinue";
+            this.buttonContinue.Size = new System.Drawing.Size(75, 37);
+            this.buttonContinue.TabIndex = 73;
+            this.buttonContinue.Text = "Continue";
+            this.buttonContinue.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button8
+            // buttonBack
             // 
-            this.button8.BackColor = System.Drawing.Color.Red;
-            this.button8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(7, 97);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(81, 37);
-            this.button8.TabIndex = 72;
-            this.button8.Text = "Back";
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.buttonBack.BackColor = System.Drawing.Color.Red;
+            this.buttonBack.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonBack.ForeColor = System.Drawing.Color.White;
+            this.buttonBack.Location = new System.Drawing.Point(7, 127);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(81, 37);
+            this.buttonBack.TabIndex = 72;
+            this.buttonBack.Text = "Back";
+            this.buttonBack.Click += new System.EventHandler(this.button8_Click);
             // 
             // label5
             // 
@@ -115,53 +110,26 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(7, 71);
+            this.label9.Location = new System.Drawing.Point(7, 66);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 20);
             this.label9.Text = "Core No";
             // 
-            // panel1
+            // textBoxTableID
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.lblTime);
-            this.panel1.Controls.Add(this.lblDepartmentCode);
-            this.panel1.Controls.Add(this.lblDate);
-            this.panel1.Controls.Add(this.lblTableID);
-            this.panel1.Location = new System.Drawing.Point(4, 140);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(306, 30);
+            this.textBoxTableID.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.textBoxTableID.Location = new System.Drawing.Point(133, 96);
+            this.textBoxTableID.Name = "textBoxTableID";
+            this.textBoxTableID.Size = new System.Drawing.Size(174, 22);
+            this.textBoxTableID.TabIndex = 81;
             // 
-            // lblTime
+            // label1
             // 
-            this.lblTime.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.lblTime.Location = new System.Drawing.Point(226, 6);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(62, 20);
-            this.lblTime.Text = "00:00:00";
-            // 
-            // lblDepartmentCode
-            // 
-            this.lblDepartmentCode.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.lblDepartmentCode.Location = new System.Drawing.Point(19, 6);
-            this.lblDepartmentCode.Name = "lblDepartmentCode";
-            this.lblDepartmentCode.Size = new System.Drawing.Size(60, 20);
-            this.lblDepartmentCode.Text = "AE-APW";
-            // 
-            // lblDate
-            // 
-            this.lblDate.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.lblDate.Location = new System.Drawing.Point(145, 6);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(75, 20);
-            this.lblDate.Text = "3/11/2010";
-            // 
-            // lblTableID
-            // 
-            this.lblTableID.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.lblTableID.Location = new System.Drawing.Point(85, 6);
-            this.lblTableID.Name = "lblTableID";
-            this.lblTableID.Size = new System.Drawing.Size(58, 20);
-            this.lblTableID.Text = "M00045";
+            this.label1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(7, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 20);
+            this.label1.Text = "Table ID";
             // 
             // Phase
             // 
@@ -169,13 +137,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(315, 174);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button8);
+            this.ClientSize = new System.Drawing.Size(315, 171);
+            this.Controls.Add(this.textBoxTableID);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxCoreNumber);
+            this.Controls.Add(this.textBoxJobNumber);
+            this.Controls.Add(this.textBoxOperatorBadgeID);
+            this.Controls.Add(this.buttonContinue);
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
@@ -183,25 +152,21 @@
             this.MinimizeBox = false;
             this.Name = "Phase";
             this.Text = "LEGNANO";
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox textBoxCoreNumber;
+        private System.Windows.Forms.TextBox textBoxJobNumber;
+        private System.Windows.Forms.TextBox textBoxOperatorBadgeID;
+        private System.Windows.Forms.Button buttonContinue;
+        private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Label lblDepartmentCode;
-        private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Label lblTableID;
+        private System.Windows.Forms.TextBox textBoxTableID;
+        private System.Windows.Forms.Label label1;
     }
 }
