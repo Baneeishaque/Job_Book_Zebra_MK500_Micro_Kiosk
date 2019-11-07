@@ -74,7 +74,7 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
                     }
                     else
                     {
-                        Actions actions = new Actions(textBoxOperatorBadgeID.Text.Trim(),job[0],job[1],core[0],core[1],textBoxTableID.Text.Trim());
+                        Actions actions = new Actions(textBoxOperatorBadgeID.Text.Trim(),job[0],job[1],core[0],core[1],textBoxTableID.Text.Trim(),phase);
                         actions.ShowDialog();
                     }
                 }

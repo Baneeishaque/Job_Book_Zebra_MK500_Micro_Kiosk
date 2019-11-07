@@ -14,8 +14,9 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
     public partial class Actions : Form
     {
         int timerSeconds = 0, timerMinutes = 0, timerHours = 0;
+        string operatorBadgeID, jobNumber, itemNumber, coreNumber, coreTotal, tableID, phase;
 
-        public Actions(string passedOperatorBadgeID, string passedJobNumber, string passedItemNumber, string passedCoreNumber, string passedCoreTotal, string passedTableID)
+        public Actions(string passedOperatorBadgeID, string passedJobNumber, string passedItemNumber, string passedCoreNumber, string passedCoreTotal, string passedTableID, string passedPhase)
         {
             InitializeComponent();
 
@@ -24,27 +25,41 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
             textBoxCoreNumber.Text = passedCoreNumber + "/" + passedCoreTotal;
             textBoxTableID.Text = passedTableID;
 
+            this.operatorBadgeID = passedOperatorBadgeID;
+            this.jobNumber = passedJobNumber;
+            this.itemNumber = passedItemNumber;
+            this.coreNumber = passedCoreNumber;
+            this.coreTotal = passedCoreTotal;
+            this.tableID = passedTableID;
+            this.phase = passedPhase;
+
             // Sets the timer interval to 1 second.
             timer.Interval = 1000;
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            //admin_pc_job_time_tracker.Service job_time_tracker_service = new ZebraApp.admin_pc_job_time_tracker.Service();
-            //try
-            //{
+            DBhandler db = new DBhandler();
+            string dbOperationResult=db.SingleInsert("INSERT INTO equipment_scrum(equipment, job, item, core, core_total, phase, status) VALUES('M00045', " + jobNumber + ", " + itemNumber + ", " + coreNumber + ", " + coreTotal + ", '" + phase + "', 'Start')");
 
-            //    job_time_tracker_service.InsertJob(lblTableID.Text, Int32.Parse(job[0]), Int32.Parse(job[1]), Int32.Parse(core[0]), Int32.Parse(core[1]), phase, "Start");
+            if (dbOperationResult=="1")
+            {
+                buttonStart.Enabled = false;
+                textBoxStatus.Text = "Start";
+                buttonEnd.Enabled = true;
+                timer.Enabled = true;
+            }
+            else if (dbOperationResult == "0")
+            {
 
-            //}
-            //catch (FormatException exception)
-            //{
-            //    MessageBox.Show(exception.Message);
-            //}
-            buttonStart.Enabled = false;
-            textBoxStatus.Text = "Start";
-            buttonEnd.Enabled = true;
-            timer.Enabled = true;
+                MessageBox.Show("Database Error...");
+            }
+            else
+            {
+                MessageBox.Show("Database Error : " + dbOperationResult);
+            }
+
+
         }
 
         private void buttonEnd_Click(object sender, EventArgs e)

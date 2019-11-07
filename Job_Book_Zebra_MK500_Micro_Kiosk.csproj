@@ -48,6 +48,7 @@
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=3.0.3600.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -63,6 +64,7 @@
     <Compile Include="Actions.Designer.cs">
       <DependentUpon>Actions.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBhandler.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
