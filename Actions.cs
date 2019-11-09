@@ -49,7 +49,7 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
         {
             try
             {
-                string dbOperationResult = jobTimeTrackerService.InsertJob("M00045", jobNumber, itemNumber, coreNumber, coreTotal, phase, "Start");
+                string dbOperationResult = jobTimeTrackerService.InsertJob("M00045",operatorBadgeID,jobNumber,itemNumber,coreNumber,coreTotal,phase);
                 if (dbOperationResult == "1")
                 {
                     buttonStart.Enabled = false;
@@ -79,7 +79,7 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
 
             try
             {
-                string dbOperationResult = jobTimeTrackerService.InsertJob("M00045", jobNumber, itemNumber, coreNumber, coreTotal, phase, "End");
+                string dbOperationResult = jobTimeTrackerService.UpdateJob("M00045",operatorBadgeID,jobNumber);
                 if (dbOperationResult == "1")
                 {
                     MessageBox.Show("Thanks...");

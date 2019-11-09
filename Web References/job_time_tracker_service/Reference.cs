@@ -33,32 +33,56 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk.job_time_tracker_service {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertJob", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string InsertJob(string equipment, string jobNumber, string itemNumber, string coreNumber, string coreTotal, string phase, string status) {
+        public string InsertJob(string equipment, string employeeID, string jobNumber, string itemNumber, string coreNumber, string coreTotal, string phase) {
             object[] results = this.Invoke("InsertJob", new object[] {
                         equipment,
+                        employeeID,
                         jobNumber,
                         itemNumber,
                         coreNumber,
                         coreTotal,
-                        phase,
-                        status});
+                        phase});
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public System.IAsyncResult BeginInsertJob(string equipment, string jobNumber, string itemNumber, string coreNumber, string coreTotal, string phase, string status, System.AsyncCallback callback, object asyncState) {
+        public System.IAsyncResult BeginInsertJob(string equipment, string employeeID, string jobNumber, string itemNumber, string coreNumber, string coreTotal, string phase, System.AsyncCallback callback, object asyncState) {
             return this.BeginInvoke("InsertJob", new object[] {
                         equipment,
+                        employeeID,
                         jobNumber,
                         itemNumber,
                         coreNumber,
                         coreTotal,
-                        phase,
-                        status}, callback, asyncState);
+                        phase}, callback, asyncState);
         }
         
         /// <remarks/>
         public string EndInsertJob(System.IAsyncResult asyncResult) {
+            object[] results = this.EndInvoke(asyncResult);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/UpdateJob", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string UpdateJob(string equipment, string employeeID, string jobNumber) {
+            object[] results = this.Invoke("UpdateJob", new object[] {
+                        equipment,
+                        employeeID,
+                        jobNumber});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public System.IAsyncResult BeginUpdateJob(string equipment, string employeeID, string jobNumber, System.AsyncCallback callback, object asyncState) {
+            return this.BeginInvoke("UpdateJob", new object[] {
+                        equipment,
+                        employeeID,
+                        jobNumber}, callback, asyncState);
+        }
+        
+        /// <remarks/>
+        public string EndUpdateJob(System.IAsyncResult asyncResult) {
             object[] results = this.EndInvoke(asyncResult);
             return ((string)(results[0]));
         }
