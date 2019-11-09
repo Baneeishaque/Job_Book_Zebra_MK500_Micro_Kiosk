@@ -47,42 +47,57 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            string dbOperationResult = jobTimeTrackerService.InsertJob("M00045", jobNumber, itemNumber, coreNumber, coreTotal, phase, "Start");
-            if (dbOperationResult == "1")
+            try
             {
-                buttonStart.Enabled = false;
-                textBoxStatus.Text = "Start";
-                buttonEnd.Enabled = true;
-                timer.Enabled = true;
-            }
-            else if (dbOperationResult == "0")
-            {
+                string dbOperationResult = jobTimeTrackerService.InsertJob("M00045", jobNumber, itemNumber, coreNumber, coreTotal, phase, "Start");
+                if (dbOperationResult == "1")
+                {
+                    buttonStart.Enabled = false;
+                    textBoxStatus.Text = "Start";
+                    buttonEnd.Enabled = true;
+                    timer.Enabled = true;
+                }
+                else if (dbOperationResult == "0")
+                {
 
-                MessageBox.Show("Database Error...");
+                    MessageBox.Show("Database Error...");
+                }
+                else
+                {
+                    MessageBox.Show("Database Error : " + dbOperationResult);
+                }
             }
-            else
+            catch (Exception exception)
             {
-                MessageBox.Show("Database Error : " + dbOperationResult);
+                MessageBox.Show("Exception : " + exception.Message);
             }
         }
 
         private void buttonEnd_Click(object sender, EventArgs e)
         {
             timer.Enabled = false;
-            string dbOperationResult = jobTimeTrackerService.InsertJob("M00045", jobNumber, itemNumber, coreNumber, coreTotal, phase, "End");
-            if (dbOperationResult == "1")
-            {
-                MessageBox.Show("Thanks...");
-                Application.Exit();
-            }
-            else if (dbOperationResult == "0")
-            {
 
-                MessageBox.Show("Database Error...");
-            }
-            else
+            try
             {
-                MessageBox.Show("Database Error : " + dbOperationResult);
+                string dbOperationResult = jobTimeTrackerService.InsertJob("M00045", jobNumber, itemNumber, coreNumber, coreTotal, phase, "End");
+                if (dbOperationResult == "1")
+                {
+                    MessageBox.Show("Thanks...");
+                    Application.Exit();
+                }
+                else if (dbOperationResult == "0")
+                {
+
+                    MessageBox.Show("Database Error...");
+                }
+                else
+                {
+                    MessageBox.Show("Database Error : " + dbOperationResult);
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Exception : " + exception.Message);
             }
         }
 

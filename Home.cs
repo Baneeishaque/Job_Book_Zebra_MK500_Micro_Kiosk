@@ -25,7 +25,7 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
         {
             //Phase phase = new Phase("Non Conformity");
             //phase.ShowDialog();
-            Barcode barcode = new Barcode("Assembly");
+            Barcode barcode = new Barcode("Non Conformity");
             barcode.ShowDialog();
         }
 

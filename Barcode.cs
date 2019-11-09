@@ -23,6 +23,7 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
             this.currentPhase = passedPhase;
 
             InitializeComponent();
+            labelPhase.Text = "Phase : " + passedPhase;
 
             isReaderInitiated = barcodeAPI.InitReader();
 
@@ -35,7 +36,7 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
             {
                 // If the reader has been initialized
                 // Start a read operation & attach a handler.
-                barcodeAPI.StartRead(false);
+                barcodeAPI.StartRead(true);
                 barcodeReadNotifyHandler = new EventHandler(currentBarcodeReadNotifyHandler);
                 barcodeAPI.AttachReadNotify(barcodeReadNotifyHandler);
             }
@@ -94,6 +95,9 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
             // Stop the read operation & detach the handler.
             barcodeAPI.StopRead();
             barcodeAPI.DetachReadNotify();
+            barcodeAPI.TermReader();
+
+            labelScan.Text = "Scanning Error...";
             if (message == "")
             {
                 MessageBox.Show("Error Reading Barcode...");
@@ -102,9 +106,9 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
             {
                 MessageBox.Show(message);
             }
-            Phase phase = new Phase("",currentPhase);
+
+            Phase phase = new Phase("", currentPhase);
             phase.ShowDialog();
-            this.Close();
         }
 
         /// <summary>
@@ -112,19 +116,16 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
         /// </summary>
         private void HandleData(Symbol.Barcode.ReaderData TheReaderData)
         {
-            Phase phase = new Phase(TheReaderData.Text,currentPhase);
+            Phase phase = new Phase(TheReaderData.Text, currentPhase);
             phase.ShowDialog();
             this.Close();
         }
 
         private void Barcode_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (isReaderInitiated)
-            {
-                barcodeAPI.StopRead();
-                barcodeAPI.DetachReadNotify();
-                barcodeAPI.TermReader();
-            }
+            barcodeAPI.StopRead();
+            barcodeAPI.DetachReadNotify();
+            barcodeAPI.TermReader();
         }
 
     }
