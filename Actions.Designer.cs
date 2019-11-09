@@ -33,7 +33,6 @@
             this.textBoxJobNumber = new System.Windows.Forms.TextBox();
             this.textBoxOperatorBadgeID = new System.Windows.Forms.TextBox();
             this.buttonEnd = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBoxTimer = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
@@ -51,7 +50,7 @@
             this.textBoxStatus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.textBoxStatus.Location = new System.Drawing.Point(133, 129);
             this.textBoxStatus.Name = "textBoxStatus";
-            this.textBoxStatus.Size = new System.Drawing.Size(174, 22);
+            this.textBoxStatus.Size = new System.Drawing.Size(73, 22);
             this.textBoxStatus.TabIndex = 69;
             // 
             // textBoxCoreNumber
@@ -88,28 +87,20 @@
             this.buttonEnd.Enabled = false;
             this.buttonEnd.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.buttonEnd.ForeColor = System.Drawing.Color.White;
-            this.buttonEnd.Location = new System.Drawing.Point(232, 194);
+            this.buttonEnd.Location = new System.Drawing.Point(232, 157);
             this.buttonEnd.Name = "buttonEnd";
             this.buttonEnd.Size = new System.Drawing.Size(75, 37);
             this.buttonEnd.TabIndex = 65;
             this.buttonEnd.Text = "END";
             this.buttonEnd.Click += new System.EventHandler(this.buttonEnd_Click);
             // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(7, 161);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 20);
-            this.label2.Text = "Time";
-            // 
             // textBoxTimer
             // 
             this.textBoxTimer.Enabled = false;
             this.textBoxTimer.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.textBoxTimer.Location = new System.Drawing.Point(133, 161);
+            this.textBoxTimer.Location = new System.Drawing.Point(212, 129);
             this.textBoxTimer.Name = "textBoxTimer";
-            this.textBoxTimer.Size = new System.Drawing.Size(173, 22);
+            this.textBoxTimer.Size = new System.Drawing.Size(95, 22);
             this.textBoxTimer.TabIndex = 62;
             this.textBoxTimer.Text = "00:00:00";
             // 
@@ -126,7 +117,7 @@
             this.buttonStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.buttonStart.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.buttonStart.ForeColor = System.Drawing.Color.White;
-            this.buttonStart.Location = new System.Drawing.Point(7, 194);
+            this.buttonStart.Location = new System.Drawing.Point(7, 157);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(81, 37);
             this.buttonStart.TabIndex = 61;
@@ -184,7 +175,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(314, 237);
+            this.ClientSize = new System.Drawing.Size(314, 200);
             this.Controls.Add(this.textBoxTableID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxStatus);
@@ -192,7 +183,6 @@
             this.Controls.Add(this.textBoxJobNumber);
             this.Controls.Add(this.textBoxOperatorBadgeID);
             this.Controls.Add(this.buttonEnd);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxTimer);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonStart);
@@ -214,7 +204,6 @@
         private System.Windows.Forms.TextBox textBoxJobNumber;
         private System.Windows.Forms.TextBox textBoxOperatorBadgeID;
         private System.Windows.Forms.Button buttonEnd;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxTimer;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonStart;

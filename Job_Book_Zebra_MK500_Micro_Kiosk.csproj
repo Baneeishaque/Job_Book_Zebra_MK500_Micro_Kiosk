@@ -46,6 +46,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
+    <Reference Include="Symbol, Version=2.8.0.0, Culture=neutral, PublicKeyToken=68ec8db391f150ca, processorArchitecture=MSIL" />
+    <Reference Include="Symbol.Barcode, Version=2.9.0.0, Culture=neutral, PublicKeyToken=68ec8db391f150ca, processorArchitecture=MSIL" />
+    <Reference Include="Symbol.StandardForms, Version=2.8.0.0, Culture=neutral, PublicKeyToken=68ec8db391f150ca, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -54,6 +57,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API.cs" />
+    <Compile Include="Barcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barcode.Designer.cs">
+      <DependentUpon>Barcode.cs</DependentUpon>
+    </Compile>
     <Compile Include="CommonApi.cs" />
     <Compile Include="Actions.cs">
       <SubType>Form</SubType>
@@ -78,6 +88,9 @@
     <EmbeddedResource Include="Actions.resx">
       <DependentUpon>Actions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Barcode.resx">
+      <DependentUpon>Barcode.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +105,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="Web References\job_time_tracker_service\Reference.cs">

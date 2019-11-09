@@ -10,10 +10,15 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
     {
         string phase;
 
-        public Phase(string phase)
+        public Phase(string barcode, string phase)
         {
             InitializeComponent();
+
             this.phase = phase;
+            if (barcode != "")
+            {
+                textBoxOperatorBadgeID.Text = barcode;
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -71,7 +76,7 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
                     }
                     else
                     {
-                        Actions actions = new Actions(textBoxOperatorBadgeID.Text.Trim(),job[0],job[1],core[0],core[1],textBoxTableID.Text.Trim(),phase);
+                        Actions actions = new Actions(textBoxOperatorBadgeID.Text.Trim(), job[0], job[1], core[0], core[1], textBoxTableID.Text.Trim(), phase);
                         actions.ShowDialog();
                     }
                 }
