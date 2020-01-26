@@ -12,6 +12,19 @@
             <s:element minOccurs="0" maxOccurs="1" name="coreNumber" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="coreTotal" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="phase" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="maxofWorkinprogress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="maxnumberTimeEmployeee" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todopassed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="doingpassed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="donepassed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstdataorNot" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Department_Code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="actualPhase" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerdescription" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coredescription" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="thickness" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -28,6 +41,14 @@
             <s:element minOccurs="0" maxOccurs="1" name="equipment" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="employeeID" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="jobNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CoreNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phasepassed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todopassed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="doingpaased" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="donepassed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coretotalpassed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="actulphase" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -35,6 +56,239 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="UpdateJobResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectJobs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jobNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="employeeID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coreNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coreTotal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phase" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectJobsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectJobsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Selectmaxofworkinprogressnumber">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectmaxofworkinprogressnumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectmaxofworkinprogressnumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectmaxoftimeEmployee">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectmaxoftimeEmployeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectmaxoftimeEmployeeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectNoofWorkinProgress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jobNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="employeeID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coreNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coreTotal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phase" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectNoofWorkinProgressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectNoofWorkinProgressResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectNofRowsinWorkinProgressToupdateDoinginScrumTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jobNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="employeeID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coreNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coreTotal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phase" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectNofRowsinWorkinProgressToupdateDoinginScrumTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectNofRowsinWorkinProgressToupdateDoinginScrumTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectNofRowsinWorkinProgressToupdateDoneinScrumTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jobNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="employeeID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coreNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coreTotal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phase" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectNofRowsinWorkinProgressToupdateDoneinScrumTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectNofRowsinWorkinProgressToupdateDoneinScrumTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectToCheckTableisAlreadyRunningOrNot_For_JobNumberandCoreNos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jobNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="employeeID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coreNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coreTotal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phase" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tableIDsend" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectToCheckTableisAlreadyRunningOrNot_For_JobNumberandCoreNosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectToCheckTableisAlreadyRunningOrNot_For_JobNumberandCoreNosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectToCheckTableisAlreadyRunningOrNot_Without_JobNumberAndCoreNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jobNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="employeeID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coreNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coreTotal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phase" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tableIDsend" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectToCheckTableisAlreadyRunningOrNot_Without_JobNumberAndCoreNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectToCheckTableisAlreadyRunningOrNot_Without_JobNumberAndCoreNumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectDetails_Department_Code">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TblIDSend" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectDetails_Department_CodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectDetails_Department_CodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_TableID_Scrum_Table_Already_Started_job">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jobsend" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemSend" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coreSend" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phaseSend" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_TableID_Scrum_Table_Already_Started_jobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_TableID_Scrum_Table_Already_Started_jobResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_For_Repair_Button">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jobNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="employeeID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coreNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coreTotal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phase" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_For_Repair_ButtonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_For_Repair_ButtonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Number_of_Employees_Working_In_this_Project">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="workin_Progress_number" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Number_of_Employees_Working_In_this_ProjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_Number_of_Employees_Working_In_this_ProjectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Count_of_Running_WorkinProgress_To_Check_Number_of_running_jobs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jobNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coreNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coreTotal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phase" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Count_of_Running_WorkinProgress_To_Check_Number_of_running_jobsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_Count_of_Running_WorkinProgress_To_Check_Number_of_running_jobsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckThisEmployeewereWorkedInthisProjectOrNot">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="workin_Progress_number" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idsendemployee" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckThisEmployeewereWorkedInthisProjectOrNotResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckThisEmployeewereWorkedInthisProjectOrNotResult" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -52,6 +306,90 @@
   <wsdl:message name="UpdateJobSoapOut">
     <wsdl:part name="parameters" element="tns:UpdateJobResponse" />
   </wsdl:message>
+  <wsdl:message name="SelectJobsSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectJobs" />
+  </wsdl:message>
+  <wsdl:message name="SelectJobsSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectmaxofworkinprogressnumberSoapIn">
+    <wsdl:part name="parameters" element="tns:Selectmaxofworkinprogressnumber" />
+  </wsdl:message>
+  <wsdl:message name="SelectmaxofworkinprogressnumberSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectmaxofworkinprogressnumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectmaxoftimeEmployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectmaxoftimeEmployee" />
+  </wsdl:message>
+  <wsdl:message name="SelectmaxoftimeEmployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectmaxoftimeEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectNoofWorkinProgressSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectNoofWorkinProgress" />
+  </wsdl:message>
+  <wsdl:message name="SelectNoofWorkinProgressSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectNoofWorkinProgressResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectNofRowsinWorkinProgressToupdateDoinginScrumTableSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectNofRowsinWorkinProgressToupdateDoinginScrumTable" />
+  </wsdl:message>
+  <wsdl:message name="SelectNofRowsinWorkinProgressToupdateDoinginScrumTableSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectNofRowsinWorkinProgressToupdateDoinginScrumTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectNofRowsinWorkinProgressToupdateDoneinScrumTableSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectNofRowsinWorkinProgressToupdateDoneinScrumTable" />
+  </wsdl:message>
+  <wsdl:message name="SelectNofRowsinWorkinProgressToupdateDoneinScrumTableSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectNofRowsinWorkinProgressToupdateDoneinScrumTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectToCheckTableisAlreadyRunningOrNot_For_JobNumberandCoreNosSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectToCheckTableisAlreadyRunningOrNot_For_JobNumberandCoreNos" />
+  </wsdl:message>
+  <wsdl:message name="SelectToCheckTableisAlreadyRunningOrNot_For_JobNumberandCoreNosSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectToCheckTableisAlreadyRunningOrNot_For_JobNumberandCoreNosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectToCheckTableisAlreadyRunningOrNot_Without_JobNumberAndCoreNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectToCheckTableisAlreadyRunningOrNot_Without_JobNumberAndCoreNumber" />
+  </wsdl:message>
+  <wsdl:message name="SelectToCheckTableisAlreadyRunningOrNot_Without_JobNumberAndCoreNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectToCheckTableisAlreadyRunningOrNot_Without_JobNumberAndCoreNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectDetails_Department_CodeSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectDetails_Department_Code" />
+  </wsdl:message>
+  <wsdl:message name="SelectDetails_Department_CodeSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectDetails_Department_CodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_TableID_Scrum_Table_Already_Started_jobSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_TableID_Scrum_Table_Already_Started_job" />
+  </wsdl:message>
+  <wsdl:message name="Select_TableID_Scrum_Table_Already_Started_jobSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_TableID_Scrum_Table_Already_Started_jobResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_For_Repair_ButtonSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_For_Repair_Button" />
+  </wsdl:message>
+  <wsdl:message name="Select_For_Repair_ButtonSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_For_Repair_ButtonResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_Number_of_Employees_Working_In_this_ProjectSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_Number_of_Employees_Working_In_this_Project" />
+  </wsdl:message>
+  <wsdl:message name="Select_Number_of_Employees_Working_In_this_ProjectSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_Number_of_Employees_Working_In_this_ProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_Count_of_Running_WorkinProgress_To_Check_Number_of_running_jobsSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_Count_of_Running_WorkinProgress_To_Check_Number_of_running_jobs" />
+  </wsdl:message>
+  <wsdl:message name="Select_Count_of_Running_WorkinProgress_To_Check_Number_of_running_jobsSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_Count_of_Running_WorkinProgress_To_Check_Number_of_running_jobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckThisEmployeewereWorkedInthisProjectOrNotSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckThisEmployeewereWorkedInthisProjectOrNot" />
+  </wsdl:message>
+  <wsdl:message name="CheckThisEmployeewereWorkedInthisProjectOrNotSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckThisEmployeewereWorkedInthisProjectOrNotResponse" />
+  </wsdl:message>
   <wsdl:portType name="ServiceSoap">
     <wsdl:operation name="InsertJob">
       <wsdl:input message="tns:InsertJobSoapIn" />
@@ -60,6 +398,62 @@
     <wsdl:operation name="UpdateJob">
       <wsdl:input message="tns:UpdateJobSoapIn" />
       <wsdl:output message="tns:UpdateJobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectJobs">
+      <wsdl:input message="tns:SelectJobsSoapIn" />
+      <wsdl:output message="tns:SelectJobsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Selectmaxofworkinprogressnumber">
+      <wsdl:input message="tns:SelectmaxofworkinprogressnumberSoapIn" />
+      <wsdl:output message="tns:SelectmaxofworkinprogressnumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectmaxoftimeEmployee">
+      <wsdl:input message="tns:SelectmaxoftimeEmployeeSoapIn" />
+      <wsdl:output message="tns:SelectmaxoftimeEmployeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectNoofWorkinProgress">
+      <wsdl:input message="tns:SelectNoofWorkinProgressSoapIn" />
+      <wsdl:output message="tns:SelectNoofWorkinProgressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectNofRowsinWorkinProgressToupdateDoinginScrumTable">
+      <wsdl:input message="tns:SelectNofRowsinWorkinProgressToupdateDoinginScrumTableSoapIn" />
+      <wsdl:output message="tns:SelectNofRowsinWorkinProgressToupdateDoinginScrumTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectNofRowsinWorkinProgressToupdateDoneinScrumTable">
+      <wsdl:input message="tns:SelectNofRowsinWorkinProgressToupdateDoneinScrumTableSoapIn" />
+      <wsdl:output message="tns:SelectNofRowsinWorkinProgressToupdateDoneinScrumTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectToCheckTableisAlreadyRunningOrNot_For_JobNumberandCoreNos">
+      <wsdl:input message="tns:SelectToCheckTableisAlreadyRunningOrNot_For_JobNumberandCoreNosSoapIn" />
+      <wsdl:output message="tns:SelectToCheckTableisAlreadyRunningOrNot_For_JobNumberandCoreNosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectToCheckTableisAlreadyRunningOrNot_Without_JobNumberAndCoreNumber">
+      <wsdl:input message="tns:SelectToCheckTableisAlreadyRunningOrNot_Without_JobNumberAndCoreNumberSoapIn" />
+      <wsdl:output message="tns:SelectToCheckTableisAlreadyRunningOrNot_Without_JobNumberAndCoreNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDetails_Department_Code">
+      <wsdl:input message="tns:SelectDetails_Department_CodeSoapIn" />
+      <wsdl:output message="tns:SelectDetails_Department_CodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_TableID_Scrum_Table_Already_Started_job">
+      <wsdl:input message="tns:Select_TableID_Scrum_Table_Already_Started_jobSoapIn" />
+      <wsdl:output message="tns:Select_TableID_Scrum_Table_Already_Started_jobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_For_Repair_Button">
+      <wsdl:input message="tns:Select_For_Repair_ButtonSoapIn" />
+      <wsdl:output message="tns:Select_For_Repair_ButtonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_Number_of_Employees_Working_In_this_Project">
+      <wsdl:input message="tns:Select_Number_of_Employees_Working_In_this_ProjectSoapIn" />
+      <wsdl:output message="tns:Select_Number_of_Employees_Working_In_this_ProjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_Count_of_Running_WorkinProgress_To_Check_Number_of_running_jobs">
+      <wsdl:input message="tns:Select_Count_of_Running_WorkinProgress_To_Check_Number_of_running_jobsSoapIn" />
+      <wsdl:output message="tns:Select_Count_of_Running_WorkinProgress_To_Check_Number_of_running_jobsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckThisEmployeewereWorkedInthisProjectOrNot">
+      <wsdl:input message="tns:CheckThisEmployeewereWorkedInthisProjectOrNotSoapIn" />
+      <wsdl:output message="tns:CheckThisEmployeewereWorkedInthisProjectOrNotSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
@@ -75,6 +469,132 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateJob">
       <soap:operation soapAction="http://tempuri.org/UpdateJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectJobs">
+      <soap:operation soapAction="http://tempuri.org/SelectJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selectmaxofworkinprogressnumber">
+      <soap:operation soapAction="http://tempuri.org/Selectmaxofworkinprogressnumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectmaxoftimeEmployee">
+      <soap:operation soapAction="http://tempuri.org/SelectmaxoftimeEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectNoofWorkinProgress">
+      <soap:operation soapAction="http://tempuri.org/SelectNoofWorkinProgress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectNofRowsinWorkinProgressToupdateDoinginScrumTable">
+      <soap:operation soapAction="http://tempuri.org/SelectNofRowsinWorkinProgressToupdateDoinginScrumTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectNofRowsinWorkinProgressToupdateDoneinScrumTable">
+      <soap:operation soapAction="http://tempuri.org/SelectNofRowsinWorkinProgressToupdateDoneinScrumTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectToCheckTableisAlreadyRunningOrNot_For_JobNumberandCoreNos">
+      <soap:operation soapAction="http://tempuri.org/SelectToCheckTableisAlreadyRunningOrNot_For_JobNumberandCoreNos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectToCheckTableisAlreadyRunningOrNot_Without_JobNumberAndCoreNumber">
+      <soap:operation soapAction="http://tempuri.org/SelectToCheckTableisAlreadyRunningOrNot_Without_JobNumberAndCoreNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDetails_Department_Code">
+      <soap:operation soapAction="http://tempuri.org/SelectDetails_Department_Code" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_TableID_Scrum_Table_Already_Started_job">
+      <soap:operation soapAction="http://tempuri.org/Select_TableID_Scrum_Table_Already_Started_job" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_For_Repair_Button">
+      <soap:operation soapAction="http://tempuri.org/Select_For_Repair_Button" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Number_of_Employees_Working_In_this_Project">
+      <soap:operation soapAction="http://tempuri.org/Select_Number_of_Employees_Working_In_this_Project" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Count_of_Running_WorkinProgress_To_Check_Number_of_running_jobs">
+      <soap:operation soapAction="http://tempuri.org/Select_Count_of_Running_WorkinProgress_To_Check_Number_of_running_jobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckThisEmployeewereWorkedInthisProjectOrNot">
+      <soap:operation soapAction="http://tempuri.org/CheckThisEmployeewereWorkedInthisProjectOrNot" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -103,13 +623,139 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SelectJobs">
+      <soap12:operation soapAction="http://tempuri.org/SelectJobs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selectmaxofworkinprogressnumber">
+      <soap12:operation soapAction="http://tempuri.org/Selectmaxofworkinprogressnumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectmaxoftimeEmployee">
+      <soap12:operation soapAction="http://tempuri.org/SelectmaxoftimeEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectNoofWorkinProgress">
+      <soap12:operation soapAction="http://tempuri.org/SelectNoofWorkinProgress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectNofRowsinWorkinProgressToupdateDoinginScrumTable">
+      <soap12:operation soapAction="http://tempuri.org/SelectNofRowsinWorkinProgressToupdateDoinginScrumTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectNofRowsinWorkinProgressToupdateDoneinScrumTable">
+      <soap12:operation soapAction="http://tempuri.org/SelectNofRowsinWorkinProgressToupdateDoneinScrumTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectToCheckTableisAlreadyRunningOrNot_For_JobNumberandCoreNos">
+      <soap12:operation soapAction="http://tempuri.org/SelectToCheckTableisAlreadyRunningOrNot_For_JobNumberandCoreNos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectToCheckTableisAlreadyRunningOrNot_Without_JobNumberAndCoreNumber">
+      <soap12:operation soapAction="http://tempuri.org/SelectToCheckTableisAlreadyRunningOrNot_Without_JobNumberAndCoreNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDetails_Department_Code">
+      <soap12:operation soapAction="http://tempuri.org/SelectDetails_Department_Code" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_TableID_Scrum_Table_Already_Started_job">
+      <soap12:operation soapAction="http://tempuri.org/Select_TableID_Scrum_Table_Already_Started_job" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_For_Repair_Button">
+      <soap12:operation soapAction="http://tempuri.org/Select_For_Repair_Button" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Number_of_Employees_Working_In_this_Project">
+      <soap12:operation soapAction="http://tempuri.org/Select_Number_of_Employees_Working_In_this_Project" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Count_of_Running_WorkinProgress_To_Check_Number_of_running_jobs">
+      <soap12:operation soapAction="http://tempuri.org/Select_Count_of_Running_WorkinProgress_To_Check_Number_of_running_jobs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckThisEmployeewereWorkedInthisProjectOrNot">
+      <soap12:operation soapAction="http://tempuri.org/CheckThisEmployeewereWorkedInthisProjectOrNot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="Service">
     <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
-      <soap:address location="http://192.168.1.102/job_time_tracker_service/Service.asmx" />
+      <soap:address location="http://10.1.1.133/job_time_tracker_service/Service.asmx" />
     </wsdl:port>
     <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
-      <soap12:address location="http://192.168.1.102/job_time_tracker_service/Service.asmx" />
+      <soap12:address location="http://10.1.1.133/job_time_tracker_service/Service.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

@@ -12,7 +12,7 @@ namespace Job_Book_Zebra_MK500_Micro_Kiosk
         [MTAThread]
         static void Main()
         {
-            Application.Run(new Home());
+            Application.Run(new Phase());
         }
     }
 }
